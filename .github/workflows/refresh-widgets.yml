@@ -1,0 +1,49 @@
+name: Refresh profile widgets
+
+on:
+  schedule:
+    # 04:17 UTC daily = 09:47 IST
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/**"
+      - ".github/workflows/refresh-widgets.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-widgets
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate widgets
+        env:
+          # GH_PAT (read:user) is used when present; the default token may not be
+          # able to read private contribution counts.
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          PROFILE_LOGIN: ${{ github.repository_owner }}
+        run: python3 tools/gen_widgets.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain assets)" ]; then
+            git add assets
+            git commit -m "chore: refresh profile widgets"
+            git push
+            echo "widgets updated"
+          else
+            echo "no change"
+          fi
