@@ -10,7 +10,8 @@
   <stop offset="0" stop-color="#6366F1"/><stop offset="0.55" stop-color="#22D3EE"/><stop offset="1" stop-color="#A855F7"/>
 </linearGradient>
 <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.07"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.07"/>
+  <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
 </linearGradient>
 <radialGradient id="orbA"><stop offset="0" stop-color="#6366F1" stop-opacity="0.55"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/></radialGradient>
 <radialGradient id="orbB"><stop offset="0" stop-color="#22D3EE" stop-opacity="0.45"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
@@ -30,7 +31,7 @@
 <g opacity="0.95"><ellipse cx="742" cy="30" rx="210" ry="150" fill="url(#orbA)"/>
 <ellipse cx="868" cy="178" rx="180" ry="130" fill="url(#orbB)"/></g>
 <rect width="880" height="208" rx="22" fill="url(#sheen)"/>
-<rect x="0.6" y="0.6" width="878.8" height="206.8" rx="21.4" stroke="#27324D" stroke-opacity="0.9"/>
+<rect x="0.6" y="0.6" width="878.8" height="206.8" rx="21.4" stroke="#27324D"/>
 <rect x="44" y="52" width="4" height="104" rx="2" fill="url(#acc)"/>
 <text x="68" y="86" font-size="35" font-weight="700" fill="#EAF0FB" letter-spacing="-0.6">Karan Singh Singare</text>
 <text x="69" y="118" font-size="16.5" font-weight="600" fill="#22D3EE" letter-spacing="0.2">Mobile Platform Engineer</text>

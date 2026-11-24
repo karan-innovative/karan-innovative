@@ -1,12 +1,12 @@
 <div align="center">
-<img src="assets/header.svg" width="100%" alt="Karan Singh Singare — Mobile Platform Engineer at Innovapptive, Hyderabad" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/header.svg"><img src="assets/light/header.svg" width="100%" alt="Karan Singh Singare — Mobile Platform Engineer at Innovapptive, Hyderabad" /></picture>
 </div>
 
 <div align="center"><a href="https://www.linkedin.com/in/karan-singare"><img src="assets/btn-linkedin.svg" height="46" alt="LinkedIn" /></a> <a href="mailto:karan.singare@innovapptive.com"><img src="assets/btn-email.svg" height="46" alt="Email" /></a> <a href="https://github.com/karan-innovative"><img src="assets/btn-github.svg" height="46" alt="GitHub" /></a></div>
 
 <br />
 
-<img src="assets/stats.svg" width="100%" alt="1,887 contributions, 212 active days, 12 day longest streak, 127 contributions on the busiest day" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stats.svg"><img src="assets/light/stats.svg" width="100%" alt="1,888 contributions, 212 active days, 12 day longest streak, 127 contributions on the busiest day" /></picture>
 
 <br />
 
@@ -24,11 +24,11 @@ Enterprise field-operations apps, used by technicians on plant floors, refinerie
 
 <br />
 
-<img src="assets/stack.svg" width="100%" alt="Working with TypeScript, React Native, Kotlin, Swift, C++, SQLite, Android, iOS" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack.svg"><img src="assets/light/stack.svg" width="100%" alt="Working with TypeScript, React Native, Kotlin, Swift, C++, SQLite, Android, iOS" /></picture>
 
 <br />
 
-<img src="assets/activity.svg" width="100%" alt="Contribution activity over the past 12 months" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/activity.svg"><img src="assets/light/activity.svg" width="100%" alt="Contribution activity over the past 12 months" /></picture>
 
 <br />
 
