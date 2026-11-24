@@ -30,7 +30,7 @@
   <rect x="0.6" y="0.6" width="206.8" height="122.8" rx="17.4" stroke="#27324D"/>
   <rect x="22" y="0" width="46" height="3" rx="1.5" fill="#22D3EE"/>
   <circle cx="182.0" cy="26" r="3.6" fill="#22D3EE" fill-opacity="0.85"/>
-  <text x="22" y="62" font-size="33" font-weight="700" fill="#EAF0FB" letter-spacing="-1.1">1,887</text>
+  <text x="22" y="62" font-size="33" font-weight="700" fill="#EAF0FB" letter-spacing="-1.1">1,888</text>
   <text x="22" y="86" font-size="10.5" font-weight="700" fill="#22D3EE" letter-spacing="1.1">CONTRIBUTIONS</text>
   <text x="22" y="104" font-size="11" fill="#6C809F">past 12 months</text>
 </g>
