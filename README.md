@@ -2,7 +2,7 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/header.svg"><img src="assets/light/header.svg" width="100%" alt="Karan Singh Singare — Mobile Platform Engineer at Innovapptive, Hyderabad" /></picture>
 </div>
 
-<div align="center"><a href="https://www.linkedin.com/in/karan-singare"><img src="assets/btn-linkedin.svg" height="46" alt="LinkedIn" /></a> <a href="mailto:karan.singare@innovapptive.com"><img src="assets/btn-email.svg" height="46" alt="Email" /></a> <a href="https://github.com/karan-innovative"><img src="assets/btn-github.svg" height="46" alt="GitHub" /></a></div>
+<div align="center"><a href="https://www.linkedin.com/in/karan-singare"><img src="assets/btn-linkedin.svg" height="66" alt="LinkedIn" /></a> <a href="mailto:karan.singare@innovapptive.com"><img src="assets/btn-email.svg" height="66" alt="Email" /></a> <a href="https://github.com/karan-innovative"><img src="assets/btn-github.svg" height="66" alt="GitHub" /></a></div>
 
 <br />
 

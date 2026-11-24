@@ -128,10 +128,19 @@ def tw(s, size, weight=600):
     return size * (k * len(s) - 0.22 * narrow)
 
 
-def svg(w, h, body, defs=None):
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
-            f'viewBox="0 0 {w} {h}" fill="none" font-family="{FONT}">\n'
-            f'<defs>{DEFS if defs is None else defs}</defs>\n{body}\n</svg>\n')
+MARGIN = 18       # breathing room so drop shadows are not clipped by the canvas
+BTN_MARGIN = 10
+
+
+def svg(w, h, body, defs=None, margin=MARGIN):
+    """Canvas is padded by `margin` on every side and the content translated into
+    it, so the drop-shadow filter has somewhere to render instead of being cut
+    off at the viewport edge."""
+    ow, oh = w + 2 * margin, h + 2 * margin
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{ow}" height="{oh}" '
+            f'viewBox="0 0 {ow} {oh}" fill="none" font-family="{FONT}">\n'
+            f'<defs>{DEFS if defs is None else defs}</defs>\n'
+            f'<g transform="translate({margin},{margin})">\n{body}\n</g>\n</svg>\n')
 
 
 def write(name, s):
@@ -148,11 +157,14 @@ def icon(key, x, y, size, color="#FFFFFF", op="1"):
 def header():
     H = 208
     b = f"""
-<rect width="{W}" height="{H}" rx="22" fill="url(#ink)"/>
-<rect width="{W}" height="{H}" rx="22" fill="url(#dots)"/>
-<g opacity="0.95"><ellipse cx="742" cy="30" rx="210" ry="150" fill="url(#orbA)"/>
-<ellipse cx="868" cy="178" rx="180" ry="130" fill="url(#orbB)"/></g>
-<rect width="{W}" height="{H}" rx="22" fill="url(#sheen)"/>
+<clipPath id="hclip"><rect width="{W}" height="{H}" rx="22"/></clipPath>
+<g clip-path="url(#hclip)">
+  <rect width="{W}" height="{H}" fill="url(#ink)"/>
+  <rect width="{W}" height="{H}" fill="url(#dots)"/>
+  <g opacity="0.95"><ellipse cx="742" cy="30" rx="210" ry="150" fill="url(#orbA)"/>
+  <ellipse cx="868" cy="178" rx="180" ry="130" fill="url(#orbB)"/></g>
+  <rect width="{W}" height="{H}" fill="url(#sheen)"/>
+</g>
 <rect x="0.6" y="0.6" width="{W-1.2}" height="{H-1.2}" rx="21.4" stroke="{STROKE}"/>
 <rect x="44" y="52" width="4" height="104" rx="2" fill="url(#acc)"/>
 <text x="68" y="86" font-size="35" font-weight="700" fill="{TXT}" letter-spacing="-0.6">Karan Singh Singare</text>
@@ -187,7 +199,7 @@ def button(name, label, ikey, c0, c1):
 <rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="{(h-3)/2}" stroke="#FFFFFF" stroke-opacity="0.28"/>
 {icon(ikey, pad, (h-iw)/2, iw, "#FFFFFF", "0.97")}
 <text x="{pad+iw+10}" y="{h/2+5.2}" font-size="14.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.2">{label}</text>"""
-    write(name, svg(w, h, b, d))
+    write(name, svg(w, h, b, d, margin=BTN_MARGIN))
 
 
 def stats():

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="208" viewBox="0 0 880 208" fill="none" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="916" height="244" viewBox="0 0 916 244" fill="none" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
 <defs>
 <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
   <stop offset="0" stop-color="#0B1020"/><stop offset="1" stop-color="#161F3A"/>
@@ -25,12 +25,16 @@
   <circle cx="1.4" cy="1.4" r="1.4" fill="#8FA6CC" fill-opacity="0.10"/>
 </pattern>
 </defs>
+<g transform="translate(18,18)">
 
-<rect width="880" height="208" rx="22" fill="url(#ink)"/>
-<rect width="880" height="208" rx="22" fill="url(#dots)"/>
-<g opacity="0.95"><ellipse cx="742" cy="30" rx="210" ry="150" fill="url(#orbA)"/>
-<ellipse cx="868" cy="178" rx="180" ry="130" fill="url(#orbB)"/></g>
-<rect width="880" height="208" rx="22" fill="url(#sheen)"/>
+<clipPath id="hclip"><rect width="880" height="208" rx="22"/></clipPath>
+<g clip-path="url(#hclip)">
+  <rect width="880" height="208" fill="url(#ink)"/>
+  <rect width="880" height="208" fill="url(#dots)"/>
+  <g opacity="0.95"><ellipse cx="742" cy="30" rx="210" ry="150" fill="url(#orbA)"/>
+  <ellipse cx="868" cy="178" rx="180" ry="130" fill="url(#orbB)"/></g>
+  <rect width="880" height="208" fill="url(#sheen)"/>
+</g>
 <rect x="0.6" y="0.6" width="878.8" height="206.8" rx="21.4" stroke="#27324D"/>
 <rect x="44" y="52" width="4" height="104" rx="2" fill="url(#acc)"/>
 <text x="68" y="86" font-size="35" font-weight="700" fill="#EAF0FB" letter-spacing="-0.6">Karan Singh Singare</text>
@@ -43,5 +47,6 @@
   <rect x="140" width="150" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.06" stroke="#27324D"/>
   <circle cx="156" cy="13" r="3.2" fill="#A855F7"/>
   <text x="167" y="17.5" font-size="11.5" font-weight="600" fill="#93A6C4" letter-spacing="0.3">Hyderabad, India</text>
+</g>
 </g>
 </svg>
